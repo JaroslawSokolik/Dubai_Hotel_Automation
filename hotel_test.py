@@ -1,6 +1,5 @@
 from selenium import webdriver
 
-
 driver = webdriver.Chrome()
 driver.implicitly_wait(10)
 driver.maximize_window()
@@ -33,3 +32,14 @@ price_values = [price.get_attribute("textContent") for price in prices]
 for price in price_values:
     print("price is " + price)
 
+assert hotel_names[0] == "Jumeirah Beach Hotel"
+assert hotel_names[1] == "Oasis Beach Tower"
+assert hotel_names[2] == "Rose Rayhaan Rotana"
+assert hotel_names[3] == "Hyatt Regency Perth"
+
+assert price_values[0] == "$22"
+assert price_values[1] == "$50"
+assert price_values[2] == "$80"
+assert price_values[3] == "$150"
+
+driver.quit()
