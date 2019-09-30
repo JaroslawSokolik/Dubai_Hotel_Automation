@@ -25,7 +25,11 @@ hotel_names = [hotel.get_attribute("textContent") for hotel in hotels]
 for name in hotel_names:
     print("hotel name is " + name)
 
+prices = driver.find_elements_by_xpath("//div[contains(@class,'price_tab')]//b")
 
+# price_values = [for price in prices] first like that then get attribute will be shown
 
-
+price_values = [price.get_attribute("textContent") for price in prices]
+for price in price_values:
+    print("price is " + price)
 
