@@ -18,7 +18,7 @@ driver.find_element_by_id("childInput").clear()
 driver.find_element_by_id("childInput").send_keys("2")
 driver.find_element_by_xpath("//*[@id='hotels']/form/div[5]/button").click()
 
-# get all h4 with class xxx and we godeeper to tag b
+# get all h4 with class xxx and we go deeper to tag b
 
 hotels = driver.find_elements_by_xpath("//h4[contains(@class,'list_title')]//b")
 hotel_names = [hotel.get_attribute("textContent") for hotel in hotels]
